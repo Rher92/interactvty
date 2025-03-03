@@ -22,7 +22,7 @@ class DeviceLoggingMiddleware(MiddlewareMixin):
         user_agent = request.META.get("HTTP_USER_AGENT", "Unknown")
 
         device, created = Device.objects.get_or_create(
-            user=request.user, ip=ip, defaults={"name": user_agent, "is_active": True}
+            user=request.user, name=user_agent, defaults={"is_active": True, "ip": ip}
         )
 
         if not created:
