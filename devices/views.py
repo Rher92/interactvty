@@ -1,12 +1,11 @@
 from django.contrib.auth import get_user_model
 from django.db import models
 from rest_framework.mixins import ListModelMixin
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.viewsets import GenericViewSet
-from rest_framework.permissions import IsAuthenticated, AllowAny
 
 from devices.models import Device
 from devices.serializer import DeviceSerializer
-
 
 
 class CitiesViewSet(ListModelMixin, GenericViewSet):
@@ -14,6 +13,4 @@ class CitiesViewSet(ListModelMixin, GenericViewSet):
     permission_classes = [AllowAny]
 
     def get_queryset(self):
-        return (
-            Device.objects.filter()
-        )
+        return Device.objects.filter()

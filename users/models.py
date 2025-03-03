@@ -1,13 +1,10 @@
 import logging
 
-from django.contrib.auth.models import AbstractUser
-from django.contrib.auth.models import PermissionsMixin
+from django.contrib.auth.models import AbstractUser, PermissionsMixin
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-
 from utils.models import BaseModel
-
 
 logger = logging.getLogger(__name__)
 

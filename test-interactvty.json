@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:8000/api/token/",
+			"name": "Create api token",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -43,7 +43,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8000/api/some-protected-view/",
+			"name": "consult user devices",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -69,7 +69,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8000/api/token/refresh/",
+			"name": "refresh api token",
 			"request": {
 				"method": "POST",
 				"header": [
